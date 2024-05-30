@@ -1,11 +1,41 @@
 <template>
-  <h1>Hello World</h1>
+  <div class="container">
+    <HeaderComp title="Task Tracker" />
+  </div>
 </template>
 
 <script>
+import HeaderComp from "./components/Header";
 export default {
   name: "App",
-  components: {},
+  components: { HeaderComp },
+  data() {
+    return {
+      tasks: [],
+    };
+  },
+  created() {
+    this.task = [
+      {
+        id: 1,
+        text: "Doctors Appointment",
+        day: "Feb 5th at 2:30pm",
+        reminder: true,
+      },
+      {
+        id: "2",
+        text: "Meeting at School",
+        day: "Feb 6th at 1:30am",
+        reminder: true,
+      },
+      {
+        id: "3",
+        text: "Food Shopping",
+        day: "Feb 5th at 2:30am",
+        reminder: true,
+      },
+    ];
+  },
 };
 </script>
 
