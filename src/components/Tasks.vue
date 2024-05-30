@@ -1,10 +1,18 @@
-<template></template>
+<template>
+  <div v-for="task in tasks" :key="task.id">
+    <TaskComp :task="task" />
+  </div>
+</template>
 
 <script>
+import TaskComp from "./Task";
 export default {
-  name: "Tasks",
+  name: "TasksComp",
   props: {
     tasks: Array,
+  },
+  components: {
+    TaskComp,
   },
 };
 </script>

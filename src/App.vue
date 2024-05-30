@@ -1,14 +1,16 @@
 <template>
   <div class="container">
     <HeaderComp title="Task Tracker" />
+    <TasksComp :tasks="task" />
   </div>
 </template>
 
 <script>
 import HeaderComp from "./components/Header";
+import TasksComp from "./components/Tasks";
 export default {
   name: "App",
-  components: { HeaderComp },
+  components: { HeaderComp, TasksComp },
   data() {
     return {
       tasks: [],
@@ -17,7 +19,7 @@ export default {
   created() {
     this.task = [
       {
-        id: 1,
+        id: "1",
         text: "Doctors Appointment",
         day: "Feb 5th at 2:30pm",
         reminder: true,
