@@ -15,7 +15,7 @@
 export default {
   name: "TaskComp",
   props: {
-    task: Array,
+    task: Object,
   },
 };
 </script>
